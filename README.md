@@ -44,17 +44,18 @@ Linux uos20 4.19.90-2005.2.0.0039.uel20.aarch64 #1 SMP Wed Jun 24 02:55:59 UTC 2
 UOS Server Euler 20
 ```
 
-> Add java8 to the centos image of the original arm64 version \n
+> Add java8 to the centos image of the original arm64 version
+> 
 > base image: arm64v8/centos:centos7
-## mirror pull
+## docker pull
 ```shell
 docker pull freemankevin/arm64v8-centos7-java8:v1
 ```
-## mirror run
+## docker run
 ```shell
 docker run -itd --name centos7-java8 freemankevin/arm64v8-centos7-java8
 ```
-## mirror test
+## docker test
 ```shell
 docker exec -it centos7-java8 bash -ec "java -version"
 docker exec -it centos7-java8 bash -ec "jar -h"
